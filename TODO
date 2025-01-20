@@ -1,0 +1,18 @@
+-l vs -c : should -l override -c? cf l. 8419
+
+testing the greps with e.g. 'echo foobar | <grep> -Hcl o' and 'echo foobar | <grep> -Hlc o':
+
+- bsd-grep
+  prints both, always -c first:
+  (standard input):1
+  (standard input)
+
+- gnu-grep:
+  -l always overrides -c:
+  (standard input)
+
+- ripgrep
+  prints one or the other, with the later argument determining which is printed
+
+- ugrep
+  same as gnu-grep
