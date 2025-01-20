@@ -1,4 +1,8 @@
--l vs -c : should -l override -c? cf l. 8419
+# TODO
+
+## -l vs -c : should -l override -c? cf l. 8419
+
+per [issue thread](https://github.com/Genivia/ugrep/issues/457) and readme, ugrep is meant to be a drop-in replacement for GNU grep, and it currently emulates GNU grep behaviour, so perhaps the issue below is intentional.
 
 testing the greps with e.g. 'echo foobar | <grep> -Hcl o' and 'echo foobar | <grep> -Hlc o':
 
